@@ -29,6 +29,11 @@ Invalid_Name_Messege () {
 	sleep .5s
 }
 
+Retry_YesOrNo () {
+	echo Invalid response,
+	Validate_Name
+}
+
 Validate_Name () {
 	IFS=" "
 	yes=( Y y )
@@ -50,11 +55,6 @@ Validate_Name () {
 		else
 			Retry_YesOrNo
 		fi
-}
-
-Retry_YesOrNo () {
-	echo Invalid response,
-	Validate_Name
 }
 
 Welcome
